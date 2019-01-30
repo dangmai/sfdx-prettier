@@ -13,7 +13,7 @@ Prettify your Apex/Lightning code on the Salesforce platform.
 [![License](https://img.shields.io/npm/l/sfdx-prettier.svg)](https://github.com/dangmai/sfdx-prettier/blob/master/package.json)
 
 <!-- toc -->
-* [Debugging your plugin](#debugging-your-plugin)
+
 <!-- tocstop -->
 <!-- install -->
 <!-- usage -->
@@ -22,7 +22,7 @@ $ npm install -g sfdx-prettier
 $ sfdx-prettier COMMAND
 running command...
 $ sfdx-prettier (-v|--version|version)
-sfdx-prettier/0.0.0-development win32-x64 node-v10.14.1
+sfdx-prettier/0.0.0-development win32-x64 node-v8.9.4
 $ sfdx-prettier --help [COMMAND]
 USAGE
   $ sfdx-prettier COMMAND
@@ -30,32 +30,23 @@ USAGE
 ```
 <!-- usagestop -->
 <!-- commands -->
-* [`sfdx-prettier hello:org [FILE]`](#sfdx-prettier-helloorg-file)
+* [`sfdx-prettier prettier:format`](#sfdx-prettier-prettierformat)
 
-## `sfdx-prettier hello:org [FILE]`
+## `sfdx-prettier prettier:format`
 
-print a greeting and your org IDs
+make your Apex and Lightning code prettier
 
 ```
 USAGE
-  $ sfdx-prettier hello:org [FILE]
+  $ sfdx-prettier prettier:format
 
 OPTIONS
-  -f, --force                                      example boolean flag
-  -n, --name=name                                  name to print
-  -u, --targetusername=targetusername              username or alias for the target org; overrides default target org
-  -v, --targetdevhubusername=targetdevhubusername  username or alias for the dev hub org; overrides default dev hub org
-  --apiversion=apiversion                          override the api version used for api requests made by this command
-  --json                                           format output as json
-  --loglevel=(trace|debug|info|warn|error|fatal)   logging level for this command invocation
+  --json                                          format output as json
+  --loglevel=(trace|debug|info|warn|error|fatal)  logging level for this command invocation
 
-EXAMPLES
-  $ sfdx hello:org --targetusername myOrg@example.com --targetdevhubusername devhub@org.com
-     Hello world! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-     My hub org id is: 00Dxx000000001234
-  
-  $ sfdx hello:org --name myname --targetusername myOrg@example.com
-     Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
+EXAMPLE
+  $ sfdx prettier:format
 ```
 
+_See code: [src\commands\prettier\format.ts](https://github.com/dangmai/sfdx-prettier/blob/v0.0.0-development/src\commands\prettier\format.ts)_
 <!-- commandsstop -->

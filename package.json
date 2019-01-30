@@ -10,6 +10,8 @@
     "@oclif/errors": "1",
     "@salesforce/command": "^1.0.1",
     "@salesforce/core": "^1.0.1",
+    "prettier": "^1.16.2",
+    "prettier-plugin-apex": "^1.0.0-alpha.5",
     "tslib": "1"
   },
   "devDependencies": {
@@ -60,6 +62,7 @@
     "posttest": "tslint -p test -t stylish",
     "prepare": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "prettier": "prettier --write \"src/**/*.{js,ts}\""
   }
 }
